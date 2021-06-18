@@ -8,12 +8,12 @@ public class GiantSpawner : MonoBehaviour
 
     public GameObject giantPrefab;
     private int giantsSpawned;
-    private float timeBetween = 4f;
+    private float timeBetween;
     private float elapsedTime;
     // Start is called before the first frame update
     void Start()
     {
-        
+     
     }
 
     // Update is called once per frame
@@ -24,6 +24,7 @@ public class GiantSpawner : MonoBehaviour
         if(giantsSpawned < 4)
         {
             SpawnGiant();
+            timeBetween = Random.Range(4f, 5f);
         }
     }
     public void MoveSpawner()
