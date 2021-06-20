@@ -7,7 +7,7 @@ public class GiantSpawner : MonoBehaviour
     Vector3Int moveMag;
 
     public GameObject giantPrefab;
-    private int giantsSpawned;
+    public static int giantsSpawned;
     private float timeBetween;
     private float elapsedTime;
     // Start is called before the first frame update
@@ -29,11 +29,11 @@ public class GiantSpawner : MonoBehaviour
     }
     public void MoveSpawner()
     {
-        if (transform.position.y >= 6)
+        if (transform.position.y >= 5)
         {
             moveMag = new Vector3Int(0, -1, 0);
         }
-        if(transform.position.y <= -3)
+        if(transform.position.y <= -2)
         {
             moveMag = new Vector3Int(0, 1, 0);
         }
