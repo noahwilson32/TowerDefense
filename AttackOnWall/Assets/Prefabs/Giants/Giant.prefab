@@ -119,3 +119,5 @@ MonoBehaviour:
   map: {fileID: 3422528281961985948, guid: 024d1a4e59bdce440ae6ebc0b72748d9, type: 3}
   wallTile: {fileID: 11400000, guid: b303d5c807ce4da4883b56efdb6b0a3b, type: 2}
   currentTile: {fileID: 0}
+  explotionPrefab: {fileID: 1562028261336615301, guid: 2131257d7e58c8f4eab06ab1fa202ce7,
+    type: 3}

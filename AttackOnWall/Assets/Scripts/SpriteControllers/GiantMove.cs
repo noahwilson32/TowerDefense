@@ -13,6 +13,8 @@ public class GiantMove : MonoBehaviour
     public TileBase currentTile;
 
     private Animator anim;
+
+    public GameObject explotionPrefab;
     // Start is called before the first frame update
     void Start()
     {
@@ -47,7 +49,8 @@ public class GiantMove : MonoBehaviour
             anim.SetBool("isIdle", true);
             yield return new WaitForSeconds(1.5f);
             anim.SetBool("isExploding", true);
-            Destroy(gameObject, .25f);
+            Destroy(gameObject, .5f);
+            Instantiate(explotionPrefab, transform.position, Quaternion.identity);
             GiantSpawner.giantsSpawned--;
         }
     }
